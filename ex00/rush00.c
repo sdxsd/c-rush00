@@ -1,5 +1,4 @@
 #include <unistd.h>
-#include <stdlib.h>
 void	ft_putchar(char c);
 
 void	rush(int x, int y)
@@ -19,22 +18,17 @@ void	rush(int x, int y)
 	{
 		while (i_x < x)
 		{
-			if (i_y == 0 || i_y == y - 1)
-			{
-				if (i_x == 0)
-				{
-					ft_putchar(square_chars[0]);
-				}
-				else if (i_x == x - 1)
-				{
-					ft_putchar(square_chars[2]);
-				}
-				else
-					ft_putchar(square_chars[1]);
-			}
-			else if (i_x == 0 || i_x == x - 1)
+			if ((i_y == 0 || i_y == y - 1) != (i_x == 0 || i_x == x - 1))
 			{
 				ft_putchar(square_chars[1]);
+			}
+			else if (i_x == 0)
+			{
+				ft_putchar(square_chars[0]);
+			}
+			else if(i_x == x - 1)
+			{
+				ft_putchar(square_chars[2]);
 			}
 			else
 				ft_putchar(square_chars[3]);
