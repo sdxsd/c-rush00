@@ -1,10 +1,9 @@
 #include <unistd.h>
 void	ft_putchar(char c);
+void	charmap(int x);
 
-void	rush(int x, int y)
+void	charmap(int x)
 {
-	int		i_x;
-	int		i_y;
 	char	square_chars[5];
 
 	square_chars[0] = 'A';
@@ -12,6 +11,14 @@ void	rush(int x, int y)
 	square_chars[2] = 'C';
 	square_chars[3] = ' ';
 	square_chars[4] = '\n';
+	ft_putchar(square_chars[x]);
+}
+
+void	rush(int x, int y)
+{
+	int		i_x;
+	int		i_y;
+
 	i_x = 0;
 	i_y = 0;
 	while (i_y < y)
@@ -19,23 +26,17 @@ void	rush(int x, int y)
 		while (i_x < x)
 		{
 			if ((i_y == 0 || i_y == y - 1) != (i_x == 0 || i_x == x - 1))
-			{
-				ft_putchar(square_chars[1]);
-			}
+				charmap(1);
 			else if (i_x == 0)
-			{
-				ft_putchar(square_chars[0]);
-			}
+				charmap(0);
 			else if (i_x == x - 1)
-			{
-				ft_putchar(square_chars[2]);
-			}
+				charmap(2);
 			else
-				ft_putchar(square_chars[3]);
+				charmap(3);
 			i_x++;
 		}
 		i_x = 0;
 		i_y++;
-		ft_putchar(square_chars[4]);
+		charmap(4);
 	}
 }
