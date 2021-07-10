@@ -2,31 +2,29 @@
 
 void	ft_putchar(char c);
 
+// Example square formatting. 
+//01110
+//2   2
+//2   2
+//01110
+
 void	rush(int x, int y)
 {
-char square[x][y];
-	int	i;
-	int j;
-	char vertical;
-	char horizontal;
-	char corner;
+	int		i_x;
+	int		i_y;
+	char	square_chars[];
 
-	i = 0;
-	j = 0;
-	vertical = '|';
-	horizontal = '-';
-	corner = 'o';
-	
-	while (j <= y)
+	square_chars = {'o', '-', '|'};
+	i_x = 0;
+	i_y = 0;
+	while (i_x <= i_y)
 	{
-		while (i <= x)
+		while (i_x <= i_y)
 		{
-			
 			ft_putchar(&corner);
-			i++;
+			i_x++;
 		}
-		i = 0;
-		j++;
+		i_y = 0;
+		i_y++;
 	}
-
 }
