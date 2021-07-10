@@ -1,18 +1,7 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        ::::::::            */
-/*   ft_putchar.c                                       :+:    :+:            */
-/*                                                     +:+                    */
-/*   By: wmaguire <wmaguire@student.codam.nl>         +#+                     */
-/*                                                   +#+                      */
-/*   Created: 2021/07/10 11:16:58 by wmaguire      #+#    #+#                 */
-/*   Updated: 2021/07/10 11:18:05 by wmaguire      ########   odam.nl         */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <unistd.h>
 
-void    ft_putchar(char c)
+void	ft_putchar(char c)
 {
-    write(1, &c, 1);
+	write (1, &c, 1);
 }
+
