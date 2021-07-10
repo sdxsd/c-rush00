@@ -26,7 +26,7 @@ void	rush(int x, int y)
 			{
 				ft_putchar(square_chars[0]);
 			}
-			else if(i_x == x - 1)
+			else if (i_x == x - 1)
 			{
 				ft_putchar(square_chars[2]);
 			}
