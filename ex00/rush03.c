@@ -3,11 +3,10 @@ void	ft_putchar(char c);
 
 void	rush(int x, int y)
 {
-	char	*square_chars;
-	int		i_x;
-	int		i_y;
+	const char	square_chars[] = "ABC \n";
+	int			i_x;
+	int			i_y;
 
-	square_chars = "ABC \n";
 	i_x = 0;
 	i_y = 0;
 	while (i_y < y)
